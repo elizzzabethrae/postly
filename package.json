@@ -1,0 +1,19 @@
+{
+  "name": "postly",
+  "version": "1.0.0",
+  "description": "A comment platform between friends",
+  "main": "index.js",
+  "scripts": {
+    "test": "export NODE_ENV=test && jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elizzzabethrae/postly.git"
+  },
+  "author": "Liz Warners",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elizzzabethrae/postly/issues"
+  },
+  "homepage": "https://github.com/elizzzabethrae/postly#readme"
+}
