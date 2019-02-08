@@ -16,5 +16,14 @@
   "bugs": {
     "url": "https://github.com/elizzzabethrae/postly/issues"
   },
-  "homepage": "https://github.com/elizzzabethrae/postly#readme"
+  "homepage": "https://github.com/elizzzabethrae/postly#readme",
+  "dependencies": {
+    "dotenv": "^5.0.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "jasmine": "^3.0.0",
+    "request": "^2.83.0"
+  }
 }
