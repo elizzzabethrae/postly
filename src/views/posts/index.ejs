@@ -9,12 +9,16 @@
 
       <h1>Post to the wall!</h1>
 
+      <a href="/posts/new" class="btn btn-success">New Post</a>
+
+
       <ul class="list-group">
 <!-- #1 -->
         <% posts.forEach((post) => { %>
 <!-- #2 -->
           <li class="list-group-item">
-            <a href="/topics/<%= topic.id %>"> <%= post.body %> </a>
+            <%= post.username %>
+             <%= post.body %>
           </li>
         <% }) %>
       </ul>

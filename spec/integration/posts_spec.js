@@ -1,6 +1,6 @@
 const request = require("request");
 const server = require("../../src/server");
-const base = "http://localhost:3000/topics/";
+const base = "http://localhost:3000/posts/";
 const sequelize = require("../../src/db/models/index").sequelize;
 const Post = require("../../src/db/models").Post;
 
@@ -51,6 +51,38 @@ describe("routes : posts", () => {
         done();
       });
     });
+  });
+
+  describe("POST /posts/create", () => {
+
+    it("should create a new post and redirect", (done) => {
+      const options = {
+        url: `${base}/posts/create`,
+        form: {
+          username: "lizzy",
+          body: "so, yah"
+        }
+      };
+      request.post(options,
+        (err, res, body) => {
+
+          Post.findOne({where: {body: "so, yah"}})
+          .then((post) => {
+            expect(post).not.toBeNull();
+            expect(post.body).toBe("so, yah");
+            expect(post.username).toBe("lizzy");
+            done();
+          })
+          .catch((err) => {
+            console.log(err);
+            done();
+          });
+        }
+      );
+    });
 
   });
+
+
+
 });
